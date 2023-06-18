@@ -96,6 +96,8 @@ input {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px ridge var(--light-background);
+  padding-bottom: 30px;
 }
 .movie-details {
   display: flex;
@@ -103,7 +105,6 @@ input {
   gap: 20px;
   padding: 20px 10px 0;
   width: 100%;
-
   max-width: 400px;
 }
 /* .movie-details-item {
@@ -145,6 +146,7 @@ img:hover {
   text-align: center;
   font-size: var(--fs-heading2);
   color: var(--light-color);
+  margin-bottom: 10px;
 }
 ul {
   display: flex;
