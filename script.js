@@ -64,6 +64,7 @@ _("#search-button").addEventListener("click", () => {
   doFilter = false;
   const searchKeywords = _("#search-input").value.trim(); //remove any leading or trailing spaces
   if (searchKeywords) {
+    _("#error-msg").style.display = "none";
     _("#top-spinner").style.display = "block"; //show the top spinner while fetching movies
     getMovieDetails(searchKeywords);
   }
