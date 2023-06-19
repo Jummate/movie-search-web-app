@@ -46,8 +46,44 @@
         </div>
       </header>
       <main id="movie">
-        <small id="error-msg"></small>
+        <p id="error-msg"></p>
+        <div id="filter-container">
+          <label for="filter-criteria">Filter by:</label>
+          <div>
+            <select
+              name="filter-criteria"
+              id="filter-criteria"
+            >
+              <option
+                value=""
+                disabled
+                selected
+              ></option>
+              <option value="Year">Year</option>
+              <option value="Released">Released</option>
+              <option value="Country">Country</option>
+              <option value="Language">Language</option>
+              <option value="Rated">Rated</option>
+              <option value="Runtime">Runtime</option>
+              <option value="Year">Year</option>
+              <option value="imdbRating">Rating</option>
+              <option value="Writer">Writer</option>
+              <option value="Actor">Actor</option>
+              <option value="Type">Type</option>
+            </select>
+            <select
+              name="filter-value"
+              id="filter-value"
+            ></select>
 
+            <button
+              type="button"
+              id="clear-filter"
+            >
+              Clear Filter
+            </button>
+          </div>
+        </div>
         <div
           class="spinner"
           id="top-spinner"

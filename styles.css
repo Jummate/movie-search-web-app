@@ -86,7 +86,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding: 30px 10px;
+  padding: 30px 10px 60px;
 }
 
 .movie-item {
@@ -191,6 +191,7 @@ li {
   color: #ff0000;
   display: none;
   text-align: center;
+  font-size: var(--fs-para);
 }
 
 .spinner {
@@ -210,6 +211,41 @@ li {
   left: 50%;
   height: 20px;
   width: 20px;
+}
+#filter-container {
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  color: var(--light-color);
+  font-size: var(--fs-para);
+  padding: 0 5px;
+}
+#filter-container div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#filter-container label {
+  display: block;
+  font-weight: bolder;
+}
+#filter-container select {
+  width: 50%;
+  padding: 1.2rem;
+  font-size: var(--fs-para);
+}
+#clear-filter {
+  padding: 0.8rem;
+  background-color: var(--light-color);
+  color: var(--darker-background);
+  font-weight: bolder;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* Spin effect for the spinner icon */
