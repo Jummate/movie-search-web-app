@@ -125,6 +125,22 @@ const prepareContent = (movie) => {
                       movie.Released
                     }</span>
                 </li>
+                <li class="movie-details-item">
+                    <span class="movie-details-subject">Year:</span>
+                    <span class="movie-details-description">${movie.Year}</span>
+                </li>
+                <li class="movie-details-item">
+                    <span class="movie-details-subject">Rating:</span>
+                    <span class="movie-details-description">${
+                      movie.imdbRating
+                    }</span>
+                </li>
+                <li class="movie-details-item">
+                    <span class="movie-details-subject">Rated:</span>
+                    <span class="movie-details-description">${
+                      movie.Rated
+                    }</span>
+                </li>
                 <li class="movie-details-item other-details">
                     <span class="movie-details-subject">Plot:</span>
                     <span class="movie-details-description">${movie.Plot}</span>
@@ -142,6 +158,25 @@ const prepareContent = (movie) => {
                       movie.Genre
                     }</span>
                 </li>
+                <li class="movie-details-item other-details">
+                    <span class="movie-details-subject">Language:</span>
+                    <span class="movie-details-description">${
+                      movie.Language
+                    }</span>
+                </li>
+                <li class="movie-details-item other-details">
+                    <span class="movie-details-subject">Awards:</span>
+                    <span class="movie-details-description">${
+                      movie.Awards
+                    }</span>
+                </li>
+                <li class="movie-details-item other-details">
+                    <span class="movie-details-subject">Writer:</span>
+                    <span class="movie-details-description">${
+                      movie.Writer
+                    }</span>
+                </li>
+             
             </ul>
 
             <button type="button" class="btn-details btn-more-details">
