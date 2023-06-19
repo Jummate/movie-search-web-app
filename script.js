@@ -88,6 +88,7 @@ const getMovieDetails = (searchKeywords) => {
       _("#error-msg").style.display = "block";
       _("#error-msg").textContent = data.Error;
       _("#top-spinner").style.display = "none";
+      _("#filter-container").style.display = "none";
     })
     .then(
       (responses) =>
@@ -107,6 +108,7 @@ const getMovieDetails = (searchKeywords) => {
       _("#error-msg").textContent =
         "Operation failed. Check your network connection";
       _("#top-spinner").style.display = "none";
+      _("#filter-container").style.display = "none";
       console.log("Request failed:", error);
     });
 };
