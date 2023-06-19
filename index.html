@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="styles.css"
     />
+
     <title>Movie Search Web App</title>
   </head>
   <body>
@@ -44,7 +45,19 @@
           </button>
         </div>
       </header>
-      <main id="movie"></main>
+      <main id="movie">
+        <small id="error-msg"></small>
+
+        <div
+          class="spinner"
+          id="top-spinner"
+        ></div>
+        <div
+          class="spinner"
+          id="bottom-spinner"
+        ></div>
+        <div id="movie-wrapper"></div>
+      </main>
       <footer>
         <p>Designed and built by Omololu Jumat &copy; 2023</p>
       </footer>

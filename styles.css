@@ -2,7 +2,6 @@
   /* Color */
   --darker-background: #100f02;
   --background: #100e02;
-  /* --background: #1c1903;  */
   --light-color: #e7c81b;
   --light-background: #2f2a06;
 
@@ -107,17 +106,15 @@ input {
   width: 100%;
   max-width: 400px;
 }
-/* .movie-details-item {
-  display: flex;
-  flex-direction: column;
-  font-size: var(--fs-para);
-} */
 
 .other-details {
   display: none;
 }
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +149,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   width: 100%;
   gap: 10px;
 }
@@ -191,6 +187,42 @@ li {
   display: none;
 }
 
+#error-msg {
+  color: #ff0000;
+  display: none;
+  text-align: center;
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--light-color);
+  background-color: transparent;
+  border-top-color: var(--darker-background);
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+#bottom-spinner {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+/* Spin effect for the spinner icon */
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* show the movie items into two coumns on larger devices */
 @media screen and (width >= 768px) {
   .movie-item {
     flex-direction: row;
