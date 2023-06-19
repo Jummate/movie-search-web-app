@@ -2,7 +2,6 @@
   /* Color */
   --darker-background: #100f02;
   --background: #100e02;
-  /* --background: #1c1903;  */
   --light-color: #e7c81b;
   --light-background: #2f2a06;
 
@@ -87,7 +86,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding: 30px 10px;
+  padding: 30px 10px 60px;
 }
 
 .movie-item {
@@ -96,6 +95,8 @@ input {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px ridge var(--light-background);
+  padding-bottom: 30px;
 }
 .movie-details {
   display: flex;
@@ -103,20 +104,17 @@ input {
   gap: 20px;
   padding: 20px 10px 0;
   width: 100%;
-
   max-width: 400px;
 }
-/* .movie-details-item {
-  display: flex;
-  flex-direction: column;
-  font-size: var(--fs-para);
-} */
 
 .other-details {
   display: none;
 }
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,12 +143,12 @@ img:hover {
   text-align: center;
   font-size: var(--fs-heading2);
   color: var(--light-color);
+  margin-bottom: 10px;
 }
 ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   width: 100%;
   gap: 10px;
 }
@@ -189,6 +187,78 @@ li {
   display: none;
 }
 
+#error-msg {
+  color: #ff0000;
+  display: none;
+  text-align: center;
+  font-size: var(--fs-para);
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--light-color);
+  background-color: transparent;
+  border-top-color: var(--darker-background);
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+#bottom-spinner {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+}
+#filter-container {
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  color: var(--light-color);
+  font-size: var(--fs-para);
+  padding: 0 5px;
+}
+#filter-container div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#filter-container label {
+  display: block;
+  font-weight: bolder;
+}
+#filter-container select {
+  width: 50%;
+  padding: 1.2rem;
+  font-size: var(--fs-para);
+}
+#clear-filter {
+  padding: 0.8rem;
+  background-color: var(--light-color);
+  color: var(--darker-background);
+  font-weight: bolder;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Spin effect for the spinner icon */
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* show the movie items into two coumns on larger devices */
 @media screen and (width >= 768px) {
   .movie-item {
     flex-direction: row;
